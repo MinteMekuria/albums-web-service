@@ -37,19 +37,20 @@ $(document).ready(function() {
 
 function loadAJAX(cat)
 {
-	//AJAX connection will go here
-    //alert('cat is: ' + cat);
-
-	$.ajax({
-  type: "GET",
-  dataType: "json",
-  url: "api.php?cat=" + cat,
-  success: bondJSON
-
-})
-
+   $.ajax({
+       type: "GET",
+       dataType: "json",
+       url: "api.php?cat=" + cat,
+       success: bondJSON,
+       error: function(xhr, status, error){
+        let errorMessage = xhr.status + ': ' + xhr.statusText
+        alert('Error - ' + errorMessage);
+    }
+ 
+   });
 }
-    
+
+
 function toConsole(data)
 {//return data to console for JSON examination
 	console.log(data); //to view,use Chrome console, ctrl + shift + j
@@ -72,13 +73,15 @@ $.each(data.films,function(i,item){
 });
 
 
-    //This loads the data on the page but it's bunched up
-    //$("#output").text(JSON.stringify(data));
-   /*
+    
+   
 	let myData = JSON.stringify(data,null,4);
 	myData = "<pre>" + myData + "</pre>";
 	$("#output").html(myData);
-	*/
+	
+    //This loads the data on the page but it's bunched up
+    //$("#output").text(JSON.stringify(data));
+
 }
 
   function bondTemplate(film){
@@ -101,8 +104,8 @@ $.each(data.films,function(i,item){
 </head>
 	<body>
 	<h1>Album Web Service</h1>
-		<a href="year" class="category">Bond Films By Year</a><br />
-		<a href="box" class="category">Bond Films By International Box Office Totals</a>
+		<a href="year" class="category">Albums By Year</a><br />
+		<a href="genre" class="category">Albums By Genre</a>
 		<h3 id="filmtitle">Title Will Go Here</h3>
 		<div id="films">
 			<!--
