@@ -64,6 +64,7 @@ function bondJSON(data){
 
 	$('#films').html('');
 
+	/*
 $.each(data.films,function(i,item){
 	let str = bondTemplate(item);
 
@@ -71,7 +72,7 @@ $.each(data.films,function(i,item){
 
 
 });
-
+*/
 
     
    
