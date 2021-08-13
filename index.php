@@ -64,7 +64,7 @@ function bondJSON(data){
 
 	$('#films').html('');
 
-	/*
+/*
 $.each(data.films,function(i,item){
 	let str = bondTemplate(item);
 
@@ -75,10 +75,12 @@ $.each(data.films,function(i,item){
 */
 
     
-   
+/*
 	let myData = JSON.stringify(data,null,4);
 	myData = "<pre>" + myData + "</pre>";
 	$("#output").html(myData);
+*/
+
 	
     //This loads the data on the page but it's bunched up
     //$("#output").text(JSON.stringify(data));
