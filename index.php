@@ -41,7 +41,7 @@ function loadAJAX(cat)
        type: "GET",
        dataType: "json",
        url: "api.php?cat=" + cat,
-       success: bondJSON
+       success: bondJSON,
        error: function(xhr, status, error){
         let errorMessage = xhr.status + ': ' + xhr.statusText
         alert('Error - ' + errorMessage);
@@ -76,10 +76,10 @@ function bondJSON(data){
 
     
 
-	let myData = JSON.stringify(data,null,4);
+	/*let myData = JSON.stringify(data,null,4);
 	myData = "<pre>" + myData + "</pre>";
 	$("#output").html(myData);
-
+	*/
 
 	
     //This loads the data on the page but it's bunched up
