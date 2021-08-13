@@ -41,7 +41,7 @@ function loadAJAX(cat)
        type: "GET",
        dataType: "json",
        url: "api.php?cat=" + cat,
-       success: bondJSON,
+       success: bondJSON
        error: function(xhr, status, error){
         let errorMessage = xhr.status + ': ' + xhr.statusText
         alert('Error - ' + errorMessage);
