@@ -63,12 +63,12 @@ function bondJSON(data){
 let myData = JSON.stringify(data,null,4);
 	myData = '<pre>' + myData + '</pre>';
 	$("#output").html(myData);
-	
+
 $('#filmtitle').html(data.title);
 
 	$('#films').html('');
 
-	
+	/*
 	$.each(data.album,function(i,item){
 		let str = bondTemplate(item);
 
@@ -76,6 +76,8 @@ $('#filmtitle').html(data.title);
 	
 
 	});
+	*/
+
     
 
     
