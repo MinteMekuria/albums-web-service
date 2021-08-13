@@ -77,7 +77,7 @@ function bondJSON(data){
     
 
 	let myData = JSON.stringify(data,null,4);
-	myData = "<pre>" + myData + "</pre>";
+	myData = '<pre>' + myData + '</pre>';
 	$("#output").html(myData);
 
 
