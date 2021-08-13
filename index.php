@@ -51,8 +51,8 @@ function loadAJAX(cat)
 }
 
 
-function toConsole(data)
-{//return data to console for JSON examination
+function toConsole(data){
+//return data to console for JSON examination
 	console.log(data); //to view,use Chrome console, ctrl + shift + j
 }
 function bondJSON(data){
@@ -76,10 +76,10 @@ function bondJSON(data){
 
     
 
-	/*let myData = JSON.stringify(data,null,4);
+	let myData = JSON.stringify(data,null,4);
 	myData = "<pre>" + myData + "</pre>";
 	$("#output").html(myData);
-	*/
+
 
 	
     //This loads the data on the page but it's bunched up
@@ -122,6 +122,6 @@ function bondJSON(data){
 			</div>
 			-->
 		</div>
-		<div id="output">Results go here</div>
+		<div id="output"></div>
 	</body>
 </html>
